@@ -46,7 +46,7 @@
 
 			const video = document.getElementById('rick');
 
-			document.addEventListener('click', () => {
+			function playVideo() {
 
 				if (firstClick) {
 					video.style.display = 'block';
@@ -54,8 +54,22 @@
 				}
 
 				video.play();
+			}
 
-			});
+			[
+				'mousemove',
+				'click',
+				'mousedown',
+				'dblclick',
+				'keydown',
+
+				'touchstart',
+				'touchmove',
+
+				'scroll',
+			].forEach(
+				event => document.addEventListener(event, playVideo)
+			);
 		</script>
 
 	</body>
