@@ -5,18 +5,18 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 		<title>NFSW</title>
 
 		<style>
+
 			body, html {
 				margin: 0;
 				padding: 0;
 				height: 100%;
 				overflow: hidden;
 			}
-
-			#rickVideo {
+			
+			#rick {
 				display: none;
 				position: fixed;
 				top: 0;
@@ -32,15 +32,24 @@
 	<body>
 
 		<video id="rick">
-			<source src="/static/rick.mp4" type="video/mp4">
+		<source src="/static/rick.mp4" type="video/mp4">
 		</video>
 
 		<script>
+
+			let firstClick = true;
+
 			const video = document.getElementById('rick');
 
 			document.addEventListener('click', () => {
-				video.style.display = 'block';
+
+				if (firstClick) {
+					video.style.display = 'block';
+					firstClick = false;
+				}
+
 				video.play();
+
 			});
 		</script>
 
