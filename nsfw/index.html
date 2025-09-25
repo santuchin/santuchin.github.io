@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
 
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="icon" href="/static/icon.png" type="image/png">
+
 		<title>NFSW</title>
 
 		<style>
@@ -32,45 +35,18 @@
 
 		</style>
 
+		<script defer src="main.js"></script>
+
+
 	</head>
 
 	<body>
 
-		<video id="rick">
-			<source src="/static/rick.mp4" type="video/mp4">
-		</video>
-
-		<script>
-
-			let firstClick = true;
-
-			const video = document.getElementById('rick');
-
-			function playVideo() {
-
-				if (firstClick) {
-					video.style.display = 'block';
-					firstClick = false;
-				}
-
-				video.play();
-			}
-
-			[
-				'mousemove',
-				'click',
-				'mousedown',
-				'dblclick',
-				'keydown',
-
-				'touchstart',
-				'touchmove',
-
-				'scroll',
-			].forEach(
-				event => document.addEventListener(event, playVideo)
-			);
-		</script>
+		<main>
+			<video id="rick">
+				<source src="./rick.mp4" type="video/mp4">
+			</video>
+		</main>
 
 	</body>
 
