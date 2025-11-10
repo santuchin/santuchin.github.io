@@ -249,8 +249,8 @@ const EVENTS = [
 	//"dblclick",
 	//"keydown",
 
-	"touchstart",
-	"touchmove",
+	//"touchstart",
+	//"touchmove",
 
 	// "scroll",
 ]
@@ -272,7 +272,8 @@ function playVideo() {
 		event => document.removeEventListener(event, playVideo)
 	)
 
-	goFullscreen()
+
+
 
 	const video = document.getElementById("rick");
 
@@ -280,6 +281,9 @@ function playVideo() {
 	firstClick = false;
 
 	video.play();
+
+
+	goFullscreen();
 
 	setTimeout(
 		() => {
