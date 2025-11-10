@@ -1,4 +1,3 @@
-/*
 
 function goFullscreen() {
 
@@ -14,6 +13,8 @@ function goFullscreen() {
 		element.msRequestFullscreen();
 	}
 }
+
+/*
 
 function insertScript(source, external = false) {
 
@@ -262,7 +263,9 @@ function startBSOD() {
 		event => document.removeEventListener(event, startBSOD)
 	)
 
-	loadBSOD();
+	goFullscreen();
+
+	//loadBSOD();
 
 }
 
@@ -278,7 +281,6 @@ function playVideo() {
 	const video = document.getElementById("rick");
 
 	video.style.display = "block";
-	firstClick = false;
 
 	video.play();
 
