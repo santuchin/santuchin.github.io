@@ -263,8 +263,9 @@ function startBSOD() {
 		event => document.removeEventListener(event, startBSOD)
 	)
 
+	console.log("loadBSOD");
 
-	//loadBSOD();
+	loadBSOD();
 
 }
 
