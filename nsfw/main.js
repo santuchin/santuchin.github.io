@@ -106,7 +106,7 @@ main footer {
 
 #qrcode {
 
-	margin-right: 1em;
+	margin-right: 3vw;
 
 	width: 7em;
 	height: 7em;
