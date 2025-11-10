@@ -283,7 +283,7 @@ function playVideo() {
 	video.play();
 
 
-	goFullscreen();
+	// goFullscreen();
 
 	setTimeout(
 		() => {
