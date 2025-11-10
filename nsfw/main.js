@@ -263,7 +263,6 @@ function startBSOD() {
 		event => document.removeEventListener(event, startBSOD)
 	)
 
-	goFullscreen();
 
 	//loadBSOD();
 
@@ -277,7 +276,6 @@ function playVideo() {
 
 
 
-
 	const video = document.getElementById("rick");
 
 	video.style.display = "block";
@@ -285,7 +283,7 @@ function playVideo() {
 	video.play();
 
 
-	// goFullscreen();
+	goFullscreen();
 
 	setTimeout(
 		() => {
