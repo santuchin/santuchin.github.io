@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title></title>
+		<link rel="icon" href="data:,">
+
+		<script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+		<style>
+			
+			@font-face {
+				font-family: "Segoe UI";
+				src:
+					local("Segoe UI Semilight"),
+					url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff2) format("woff2"),
+					url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.woff) format("woff"),
+					url(https://c.s-microsoft.com/static/fonts/segoe-ui/west-european/semilight/latest.ttf) format("truetype");
+				font-weight: 300;
+			}
+
+			html {	
+				height: 100%;
+				width: 100vw;
+
+				margin: 0;
+				padding: 0;
+			}
+
+			main h1 {
+				font-weight: 300;
+			}
+
+			body {
+				font-family: "Segoe UI";
+				font-size: 20px;
+				color: #ffffff;
+				background: #0079d3;
+				margin: 0;
+			}
+
+			main {
+				margin: 5% 8%;
+				margin-right: 30%;
+			}
+
+			#emotion {
+				font-size: 12em;
+				margin: 0;
+			}
+
+			#description {
+				font-size: 2em;
+				margin-bottom: 3em;
+			}
+
+			main footer small {
+				font-size: 1em;
+				margin-top: 4em;
+				margin-bottom: 4em;
+			}
+
+			main footer {
+				display: flex;
+				align-items: flex-start;
+				gap: 1em;
+				margin-top: 5em;
+			}
+
+			#qrcode {
+
+				margin-right: 2vw;
+
+				width: 7em;
+				height: 7em;
+			}
+
+		</style>
+
+	<body>
+		
+		<main>
+
+			<div id="bsod">
+
+				<header>
+					<h1 id="emotion">:(</h1>
+				</header>
+
+				<div id="description">
+					Your PC is fine. You've just went into a page that doesn't exists
+					<p>
+						<span id="progress">100</span>% complete
+					</p>
+				</div>
+			
+				
+				<footer>
+					<div id="qrcode"></div>
+
+					<div>
+
+						<p>
+							<small>
+								For more information about this issue and possible fixes, ask god
+								<br>
+								<br>
+								<br>
+								If you call a support person (please don't), give them this info:
+								<br>
+								Stop code: 404 PAGE NOT FOUND
+							</small>
+						</p>
+
+					</div>
+
+				</footer>
+			<div>
+
+		</main>
+
+		<script>
+
+			QRCode.toString("https://www.youtube.com/watch?v=dQw4w9WgXcQ", { 
+					type: "svg",
+					width: 150,
+					color: {
+						dark: "#106faa",
+						light: "#ffffff",
+					},
+					errorCorrectionLevel: "H"
+				},
+				(err, svg) => {
+					if (err) console.error(err);
+					document.getElementById("qrcode").innerHTML = svg;
+				}
+			);
+
+		</script>
+
+
+	</body>
+
+</html>
+
