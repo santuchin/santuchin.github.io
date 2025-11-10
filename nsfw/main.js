@@ -1,4 +1,4 @@
-
+/*
 
 function goFullscreen() {
 
@@ -229,7 +229,7 @@ function startProgess() {
 
 }
 
-
+*/
 
 
 
