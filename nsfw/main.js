@@ -1,29 +1,55 @@
 
-let firstClick = true;
+const EVENTS = [
+	// "mousemove",
+	"click",
+	//"mousedown",
+	//"dblclick",
+	//"keydown",
 
-const video = document.getElementById('rick');
+	"touchstart",
+	"touchmove",
+
+	// "scroll",
+]
+
+function startBSOD() {
+
+
+	EVENTS.forEach(
+		event => document.removeEventListener(event, startBSOD)
+	)
+
+	loadBSOD();
+
+}
 
 function playVideo() {
 
-	if (firstClick) {
-		video.style.display = 'block';
-		firstClick = false;
-	}
+	EVENTS.forEach(
+		event => document.removeEventListener(event, playVideo)
+	)
+
+	goFullscreen()
+
+	const video = document.getElementById("rick");
+
+	video.style.display = "block";
+	firstClick = false;
 
 	video.play();
+
+	setTimeout(
+		() => {
+			EVENTS.forEach(
+				event => document.addEventListener(event, startBSOD)
+			);
+		},
+		2_000
+	);
+
 }
 
-[
-	'mousemove',
-	'click',
-	'mousedown',
-	'dblclick',
-	'keydown',
 
-	'touchstart',
-	'touchmove',
-
-	'scroll',
-].forEach(
+EVENTS.forEach(
 	event => document.addEventListener(event, playVideo)
 );
