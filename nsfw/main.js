@@ -61,7 +61,7 @@ main h1 {
 
 body {
 	font-family: "Segoe UI";
-	font-size: 20px;
+	font-size: 17px;
 	color: #ffffff;
 	background: #0079d3;
 	margin: 0;
