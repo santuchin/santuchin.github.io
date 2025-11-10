@@ -14,7 +14,6 @@ function goFullscreen() {
 	}
 }
 
-/*
 
 function insertScript(source, external = false) {
 
@@ -229,8 +228,6 @@ function startProgess() {
 	document.body.appendChild(QRCodeScript);
 
 }
-
-*/
 
 
 
